@@ -23,7 +23,8 @@ public class SecurityConfiguration {
                         "/swagger-ui.html").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin();
+                .formLogin()
+                .loginPage("/notdefault");
         return http.build();
     }
 
